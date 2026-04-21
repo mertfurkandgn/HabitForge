@@ -1,0 +1,14 @@
+volumes:
+  postgres_data:
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment :
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: habitforge
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
