@@ -32,3 +32,6 @@ dist/
 build/
 .next/
 out/
+
+# Prd folder
+prd_folder/
