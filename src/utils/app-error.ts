@@ -22,7 +22,7 @@ export class AppError extends Error {
   }
 
   static forbidden(message = "Access denied") {
-    return new AppError(message, 401, "FORBIDDEN");
+    return new AppError(message, 403, "FORBIDDEN");
   }
 
   static notFound(resource: string) {

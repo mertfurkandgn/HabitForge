@@ -39,7 +39,8 @@ export async function login(data: { email: string, password: string}) {
     }
     const userToken =   generateToken( { userId: user.id })
 
-    return { user, token: userToken };
+    const { passwordHash: _, ...safeUser } = user;
+    return { user: safeUser, token: userToken };
 
 
 }
